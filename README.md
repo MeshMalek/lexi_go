@@ -46,6 +46,8 @@ The application is structured to provide a comprehensive learning journey, from 
 
 * **Framework:** **Flutter** (Ensuring beautiful, natively compiled cross-platform performance).
 * **Language:** Dart
+* Design Tools: Stitch AI with Google (for initial design generation and wireframing assistance) and Figma (for UI/UX design, prototyping, and final asset creation).
+
 
 
 ## 🚀 Getting Started
