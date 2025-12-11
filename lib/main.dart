@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Lexi Go',
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+      ),
       initialRoute: AppRoutes.onboarding1,
       routes: AppRoutes.routes,
     );

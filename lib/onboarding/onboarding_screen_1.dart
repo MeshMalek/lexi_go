@@ -16,12 +16,13 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
           children: [
             Assets.images.onboarding1.image(
               width: MediaQuery.of(context).size.width,
+
               fit: BoxFit.cover,
             ),
             Expanded(
