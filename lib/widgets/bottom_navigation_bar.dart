@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
-import 'package:material_symbols_icons/symbols.dart';
 
 class AppBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
@@ -16,19 +14,18 @@ class AppBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      unselectedItemColor: Color(0xff0D1C12),
+      unselectedItemColor: const Color(0xff0D1C12),
       selectedItemColor: const Color(0xff4D996B),
       currentIndex: currentIndex,
       onTap: onTap,
-      items: [
-        const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
         BottomNavigationBarItem(
-          icon: const Icon(Symbols.category),
+          icon: Icon(Icons.category),
           label: 'Categories',
         ),
         BottomNavigationBarItem(
-          icon: const Icon(Symbols.progress_activity),
+          icon: Icon(Icons.show_chart),
           label: 'Progress',
         ),
         BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),

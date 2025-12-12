@@ -23,11 +23,17 @@ class _MainScreenState extends State<MainScreen> {
     _onItemTapped(1);
   }
 
+  void _navigateToWelcome() {
+    _onItemTapped(0);
+  }
+
   @override
   Widget build(BuildContext context) {
     final List<Widget> widgetOptions = <Widget>[
       WelcomeScreen(onStartLearning: _navigateToCategories),
-      const CategoriesScreen(),
+      CategoriesScreen(onBack: _navigateToWelcome),
+      const Scaffold(body: Center(child: Text('Progress'))),
+      const Scaffold(body: Center(child: Text('Settings'))),
     ];
 
     return Scaffold(
