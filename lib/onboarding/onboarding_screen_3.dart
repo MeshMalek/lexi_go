@@ -1,7 +1,8 @@
-import 'package:english_explorer/core/constants.dart';
 import 'package:english_explorer/core/routes.dart';
 import 'package:english_explorer/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+
+import '../core/constants.dart';
 
 class OnboardingScreen3 extends StatefulWidget {
   const OnboardingScreen3({super.key});
@@ -50,7 +51,10 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
                     const Spacer(),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, AppRoutes.welcome_screen);
+                        Navigator.pushReplacementNamed(
+                          context,
+                          AppRoutes.main_screen,
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff2BED7D),
