@@ -2,7 +2,9 @@ import 'package:english_explorer/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+  final VoidCallback onStartLearning;
+
+  const WelcomeScreen({super.key, required this.onStartLearning});
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +38,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     const Spacer(),
                     ElevatedButton(
-                      onPressed: () {
-                        // Navigate to categories screen
-                      },
+                      onPressed: onStartLearning,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff2BED7D),
                         minimumSize: const Size(double.infinity, 50),
