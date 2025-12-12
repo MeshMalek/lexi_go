@@ -1,7 +1,7 @@
 import 'package:english_explorer/onboarding/onboarding_screen_1.dart';
 import 'package:english_explorer/onboarding/onboarding_screen_2.dart';
 import 'package:english_explorer/onboarding/onboarding_screen_3.dart';
-import 'package:english_explorer/welcome/welcome_screen.dart';
+import 'package:english_explorer/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
