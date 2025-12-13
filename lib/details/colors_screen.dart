@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ColorsScreen extends StatefulWidget {
-  const ColorsScreen({super.key});
+class ColorsScreen extends StatelessWidget {
+  final VoidCallback onBack;
 
-  @override
-  State<ColorsScreen> createState() => _ColorsScreenState();
-}
+  const ColorsScreen({super.key, required this.onBack});
 
-class _ColorsScreenState extends State<ColorsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Colors')),
-      body: Center(child: Text('Colors Screen')),
+      appBar: AppBar(
+        title: const Text('Colors'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: onBack,
+        ),
+      ),
+      body: const Center(child: Text('Colors Screen')),
     );
   }
 }

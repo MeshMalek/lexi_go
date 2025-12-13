@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 
-class FamilyMembersScreen extends StatefulWidget {
-  const FamilyMembersScreen({super.key});
+class FamilyMembersScreen extends StatelessWidget {
+  final VoidCallback onBack;
 
-  @override
-  State<FamilyMembersScreen> createState() => _FamilyMembersScreenState();
-}
+  const FamilyMembersScreen({super.key, required this.onBack});
 
-class _FamilyMembersScreenState extends State<FamilyMembersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Family Members')),
-      body: Center(child: Text('Family Members Screen')),
+      appBar: AppBar(
+        title: const Text('Family Members'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: onBack,
+        ),
+      ),
+      body: const Center(
+        child: Text('Family Members Screen'),
+      ),
     );
   }
 }

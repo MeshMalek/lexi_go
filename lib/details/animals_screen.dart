@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
-class AnimalsScreen extends StatefulWidget {
-  const AnimalsScreen({super.key});
+class AnimalsScreen extends StatelessWidget {
+  final VoidCallback onBack;
 
-  @override
-  State<AnimalsScreen> createState() => _AnimalsScreenState();
-}
+  const AnimalsScreen({super.key, required this.onBack});
 
-class _AnimalsScreenState extends State<AnimalsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Animals')),
+      appBar: AppBar(
+        title: const Text('Animals'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: onBack,
+        ),
+      ),
       body: const Center(child: Text('Animals Screen')),
     );
   }
